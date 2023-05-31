@@ -1,7 +1,7 @@
-import { fetchDog } from '../api/todosApi';
+import { fetchDog } from '../../api/animalApi';
 import { useEffect } from 'react';
-import LazySpinner from './LazySpinner';
-import { useApi } from '../api/hooks/useApi';
+import LazySpinner from '../LazySpinner';
+import { useApi } from '../../api/hooks/useApi';
 
 const useFetchDog = () => {
   const {

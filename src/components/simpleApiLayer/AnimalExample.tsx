@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { fetchCat, fetchDog } from '../api/todosApi';
+import { fetchCat, fetchDog } from '../../api/animalApi';
 
 const useFetchDog = () => {
   const [dog, setDog] = useState<string>();

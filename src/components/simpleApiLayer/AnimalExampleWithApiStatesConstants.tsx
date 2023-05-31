@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { fetchDog } from '../api/todosApi';
-import { withAsync } from '../helpers/withAsync';
+import { fetchDog } from '../../api/animalApi';
+import { withAsync } from '../../helpers/withAsync';
 
 import {
   IDLE,
@@ -9,7 +9,7 @@ import {
   SUCCESS,
   ERROR,
   ApiStatus,
-} from '../api/constants/apiStatus';
+} from '../../api/constants/apiStatus';
 
 const useFetchDog = () => {
   const [dog, setDog] = useState<string>();

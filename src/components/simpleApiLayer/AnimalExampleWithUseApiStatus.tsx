@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import LazySpinner from './LazySpinner';
+import LazySpinner from '../LazySpinner';
 
-import { fetchDog } from '../api/todosApi';
-import { withAsync } from '../helpers/withAsync';
+import { fetchDog } from '../../api/animalApi';
+import { withAsync } from '../../helpers/withAsync';
 
-import { IDLE, PENDING, SUCCESS, ERROR } from '../api/constants/apiStatus';
-import { useApiStatus } from '../api/hooks/useApiStatus';
+import { IDLE, PENDING, SUCCESS, ERROR } from '../../api/constants/apiStatus';
+import { useApiStatus } from '../../api/hooks/useApiStatus';
 
 const useFetchDog = () => {
   const [dog, setDog] = useState<string>();

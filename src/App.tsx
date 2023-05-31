@@ -1,9 +1,9 @@
 import './App.css';
-import AnimalExample from './components/AnimalExample';
-import AnimalExampleWithApiStates from './components/AnimalExampleWithApiStates';
-import AnimalExampleWithApiStatesConstants from './components/AnimalExampleWithApiStatesConstants';
-import AnimalExampleWithUseApiStatus from './components/AnimalExampleWithUseApiStatus';
-import AnimalExampleWithUseApi from './components/AnimalExampleWithUseApi';
+import AnimalExample from './components/simpleApiLayer/AnimalExample';
+import AnimalExampleWithApiStates from './components/simpleApiLayer/AnimalExampleWithApiStates';
+import AnimalExampleWithApiStatesConstants from './components/simpleApiLayer/AnimalExampleWithApiStatesConstants';
+import AnimalExampleWithUseApiStatus from './components/simpleApiLayer/AnimalExampleWithUseApiStatus';
+import AnimalExampleWithUseApi from './components/simpleApiLayer/AnimalExampleWithUseApi';
 
 function App() {
   return (
@@ -14,11 +14,9 @@ function App() {
         </h1>
         {/* <AnimalExample /> */}
         {/* <AnimalExampleWithApiStates /> */}
-
         {/* <AnimalExampleWithApiStatesConstants /> */}
         {/* <AnimalExampleWithUseApiStatus /> */}
-
-        <AnimalExampleWithUseApi />
+        {/* <AnimalExampleWithUseApi /> */}
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { fetchCat, fetchDog } from '../api/todosApi';
-import { withAsync } from '../helpers/withAsync';
+import { fetchCat, fetchDog } from '../../api/animalApi';
+import { withAsync } from '../../helpers/withAsync';
 
 type ApiStatus = 'IDLE' | 'PENDING' | 'SUCCESS' | 'ERROR';
 
