@@ -22,15 +22,15 @@ import BusinessCardEditor from './components/StateManagementPatterns/BusinessCar
 import GlobalSpinnerExample from './components/ContextAPI/GlobalSpinnerExample';
 
 import TasksBoard from './components/TasksBoard';
+import UsersManager from './components/UsersManager/UsersManager';
 
 const queryClient = new QueryClient();
 
 function App() {
-  // return (
+  //return (
   //   <>
   //     <QueryClientProvider client={queryClient}>
   //       <ToastContainer />
-
   //       <div className='App mx-auto max-w-6xl text-center my-8'>
   //         <h1 className='font-semibold text-2xl'>
   //           React - The Road To Enterprise
@@ -44,26 +44,29 @@ function App() {
   //         {/* <FetchPosts /> */}
   //         {/* <PaginatedTodos /> */}
   //         {/* <ReactQueryDevtools /> */}
-
   //         {/* <InfiniteScrollTodos /> */}
-
   //         <BusinessCardEditor />
   //       </div>
   //     </QueryClientProvider>
   //   </>
   // );
+  // return (
+  //   <GlobalSpinnerContextProvider>
+  //     <div className='App mx-auto max-w-6xl text-center my-8'>
+  //       <h1 className='font-semibold text-2xl'>
+  //         React - The Road To Enterprise
+  //       </h1>
+  //       {/* <GlobalSpinnerExample /> */}
+  //       <TasksBoard />
+  //     </div>
+  //   </GlobalSpinnerContextProvider>
+  // );
 
   return (
-    <GlobalSpinnerContextProvider>
-      <div className='App mx-auto max-w-6xl text-center my-8'>
-        <h1 className='font-semibold text-2xl'>
-          React - The Road To Enterprise
-        </h1>
-        {/* <GlobalSpinnerExample /> */}
-
-        <TasksBoard />
-      </div>
-    </GlobalSpinnerContextProvider>
+    <div className='App mx-auto max-w-6xl text-center my-8'>
+      <h1 className='font-semibold text-2xl'>React - The Road To Enterprise</h1>
+      <UsersManager />
+    </div>
   );
 }
 
