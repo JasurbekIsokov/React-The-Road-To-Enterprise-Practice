@@ -16,6 +16,8 @@ import UpdatePosts from './components/react-query/UpdatePosts';
 import PaginatedTodos from './components/react-query/PaginatedTodos';
 import InfiniteScrollTodos from './components/react-query/InfiniteScrollTodos';
 
+import BusinessCardEditor from './components/StateManagementPatterns/BusinessCardEditor';
+
 const queryClient = new QueryClient();
 
 function App() {
@@ -36,10 +38,12 @@ function App() {
           {/* <UpdatePosts /> */}
           {/* <FetchPosts /> */}
           {/* <PaginatedTodos /> */}
-        </div>
-        {/* <ReactQueryDevtools /> */}
+          {/* <ReactQueryDevtools /> */}
 
-        {/* <InfiniteScrollTodos /> */}
+          {/* <InfiniteScrollTodos /> */}
+
+          <BusinessCardEditor />
+        </div>
       </QueryClientProvider>
     </>
   );
