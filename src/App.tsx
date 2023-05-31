@@ -21,6 +21,8 @@ import BusinessCardEditor from './components/StateManagementPatterns/BusinessCar
 
 import GlobalSpinnerExample from './components/ContextAPI/GlobalSpinnerExample';
 
+import TasksBoard from './components/TasksBoard';
+
 const queryClient = new QueryClient();
 
 function App() {
@@ -57,7 +59,9 @@ function App() {
         <h1 className='font-semibold text-2xl'>
           React - The Road To Enterprise
         </h1>
-        <GlobalSpinnerExample />
+        {/* <GlobalSpinnerExample /> */}
+
+        <TasksBoard />
       </div>
     </GlobalSpinnerContextProvider>
   );
