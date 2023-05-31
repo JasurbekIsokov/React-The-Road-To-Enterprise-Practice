@@ -14,6 +14,7 @@ import AnimalExampleWithUseApi from './components/simpleApiLayer/AnimalExampleWi
 import FetchPosts from './components/react-query/FetchPosts';
 import UpdatePosts from './components/react-query/UpdatePosts';
 import PaginatedTodos from './components/react-query/PaginatedTodos';
+import InfiniteScrollTodos from './components/react-query/InfiniteScrollTodos';
 
 const queryClient = new QueryClient();
 
@@ -32,13 +33,13 @@ function App() {
           {/* <AnimalExampleWithApiStatesConstants /> */}
           {/* <AnimalExampleWithUseApiStatus /> */}
           {/* <AnimalExampleWithUseApi /> */}
-          <UpdatePosts />
-
-          <FetchPosts />
-
-          <PaginatedTodos />
+          {/* <UpdatePosts /> */}
+          {/* <FetchPosts /> */}
+          {/* <PaginatedTodos /> */}
         </div>
         {/* <ReactQueryDevtools /> */}
+
+        {/* <InfiniteScrollTodos /> */}
       </QueryClientProvider>
     </>
   );

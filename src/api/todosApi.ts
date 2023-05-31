@@ -14,3 +14,13 @@ export type TodosData = {
 
 export const fetchTodosByPage = (page: number) =>
   api.get<TodosData>('todos', { params: { page } }).then((res) => res.data);
+
+export type TodosDataWithCursor = {
+  todos: Todos[];
+  nextCursor: number | null;
+};
+
+export const fetchTodosByCursor = (cursor: number) =>
+  api
+    .get<TodosDataWithCursor>('todos', { params: { cursor } })
+    .then((res) => res.data);
