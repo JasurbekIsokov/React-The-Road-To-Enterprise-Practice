@@ -59,18 +59,18 @@ const BusinessCardEditor = (props: BusinessCardEditorProps) => {
     <div className='p-8 container mx-auto grid grid-cols-2 gap-8'>
       <BusinessCardForm
         name={form.name}
-        description={form.description}
         address={form.address}
         phoneNumber={form.phoneNumber}
+        description={form.description}
         onInputChange={onInputChange}
         onFileUpload={onFileUpload}
       />
 
       <BusinessCardPreview
-        avatar={avatarPreview}
         name={form.name}
-        description={form.description}
         address={form.address}
+        avatar={avatarPreview}
+        description={form.description}
         phoneNumber={form.phoneNumber}
       />
     </div>
