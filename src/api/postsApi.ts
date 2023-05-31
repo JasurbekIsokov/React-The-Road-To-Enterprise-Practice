@@ -11,5 +11,5 @@ export type PostsResponse = {
   posts: Post[];
 };
 
-export const fetchQuotes = () =>
+export const fetchPosts = () =>
   api.get<PostsResponse>('/posts').then((res) => res.data);
