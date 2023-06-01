@@ -12,7 +12,6 @@ export type PostsResponse = {
 };
 
 export const fetchPosts = () =>
-  api.get<PostsResponse>('/posts').then((res) => res.data);
+  api.get<PostsResponse>('posts').then((res) => res.data);
 
-export const postPosts = (post: Omit<Post, 'id'>) => api.post('/posts', post);
-
+export const postPosts = (post: Omit<Post, 'id'>) => api.post('posts', post);

@@ -41,7 +41,7 @@ export const getSelectedUser = createSelector(
   (state: RootState) => state.users,
   (users) => {
     if (users.selectedUserId) {
-      return users.users.find((user) => user.id === users.selectedUserId);
+      return users?.users.find((user) => user.id === users.selectedUserId);
     }
     return null;
   }

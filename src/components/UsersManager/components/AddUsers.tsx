@@ -1,35 +1,34 @@
-import { useAppDispatch } from '../../../store/hooks';
-import { useState } from 'react';
-import { addUser } from '../usersSlice';
+import React, { useEffect, useState } from 'react';
+import { useCreateUserMutation } from './usersSlice';
 
 type AddUsersProps = {};
 const createId = () => '_' + Math.random().toString(36).substr(2, 9);
-
 const initialState = {
   name: '',
   email: '',
 };
 
 const AddUsers = (props: AddUsersProps) => {
-  const dispatch = useAppDispatch();
   const [form, setForm] = useState(initialState);
-  const onAddUser = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const [addUser, { isLoading: isAddingUser, isSuccess: isAddUserSuccess }] =
+    useCreateUserMutation();
+  const onAddUser = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (!form.name || !form.email) return;
-    dispatch(
-      addUser({
-        id: createId(),
-        ...form,
-      })
-    );
-    setForm(initialState);
+    addUser({
+      id: createId(),
+      ...form,
+    });
   };
+  useEffect(() => {
+    if (isAddUserSuccess) {
+      setForm(initialState);
+    }
+  }, [isAddUserSuccess]);
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setForm((state) => ({
-      ...state,
-      [e.target.name]: e.target.value,
-    }));
+    setForm((state) => ({ ...state, [e.target.name]: e.target.value }));
   };
+
   return (
     <div>
       <h2 className='font-semibold text-xl mb-4'>Add users</h2>
@@ -63,8 +62,10 @@ const AddUsers = (props: AddUsersProps) => {
         <button
           className='w-28 self-end bg-blue-700 text-blue-100 px-4 py-3'
           onClick={onAddUser}
+          disabled={isAddingUser}
         >
-          Add User
+          {' '}
+          {isAddingUser ? 'Adding...' : 'Add User'}
         </button>
       </form>
     </div>
